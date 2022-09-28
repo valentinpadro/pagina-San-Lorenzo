@@ -1,0 +1,107 @@
+.posiciones {
+  h2 {
+    padding-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+  }
+}
+.tablas {
+  background-color: white;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  width: 40%;
+  .ciclon {
+    color: rgb(206, 22, 22);
+    text-decoration: overline;
+    text-decoration-thickness: 2px;
+  }
+  .tablaPosiciones {
+    display: inline;
+  }
+  .tablaPuntos,
+  .tablaGoles,
+  .tablaPartidos {
+    li {
+      list-style-type: none;
+    }
+  }
+}
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 0.2px white solid;
+  border-radius: 15px;
+}
+@media (max-width: 1066px) {
+  .tablas {
+    width: 90%;
+  }
+}
+@media (max-width: 913px) {
+  .tablas {
+    .tablaGoles,
+    .tablaPartidos,
+    .tablaPosiciones,
+    .tablaPuntos {
+      width: 50%;
+    }
+  }
+}
+
+// PALMARES TABLA
+
+.palmaresSection {
+  padding-top: 40px;
+  .tablaPalmares {
+    padding-top: 20px;
+    background-color: white;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    width: 100%;
+    gap: 0;
+    border: black solid 5px;
+
+    .titulo,
+    .tipo,
+    .asociacion {
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+  .border1 {
+    border: 1px black solid;
+    text-align: center;
+  }
+  .border2 {
+    border: 1px black solid;
+    background-color: rgb(8, 8, 122);
+    color: red;
+    text-align: center;
+  }
+  .h2Palmares {
+    text-align: center;
+  }
+}
+@mixin borderdetabla{
+  border: solid 2px black;
+  text-align: center;
+}
+.border3 {
+  @include borderdetabla;
+}
+.border4 {
+  @include borderdetabla;
+  color: red;
+}
+.border5 {
+  @include borderdetabla;
+  color: rgb(19, 216, 19);
+}
+.border6 {
+  @include borderdetabla;
+  color: rgb(165, 123, 8);
+}
